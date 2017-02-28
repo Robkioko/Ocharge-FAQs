@@ -1,0 +1,26 @@
+Version v2.1:
+=============
+
+New Features/Updates:
+
+Home Page: Update home page to dynamically pull all the categories with icons.
+Update the layout of New Request and New community post page.
+Update the user manual.
+
+Bug Fixes:
+
+Change fonts using Zendesk appearance option.
+Fix responsive issues on home page.
+
+
+Version v2.0:
+=============
+
+
+New Features/Updates:
+=====================
+
+* Enable community v2 support
+* Added with more template for community v2 support. 
+
+

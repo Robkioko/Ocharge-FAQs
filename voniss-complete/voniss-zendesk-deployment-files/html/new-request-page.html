@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="col-md-10 col-sm-12 col-xs-12">
+    <div class="row">
+      <h3>Customer support</h3>
+      <div class="ticket-details">
+        <p>Email us regarding your issue or question. We'll look into it while you focus on what matters. We respond to most submissions within 30 minutes and all within 24 hours.</p>
+      </div>
+    </div>  
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-sm-6 col-xs-12">
+      <div class="contact-form form">
+        <h3>Email us</h3>
+        <!-- Zendesk's component to show/display the Submit A Request Form -->
+        {{request_form}}
+      </div>
+    </div>  
+    <div class="col-md-6 col-sm-6 col-xs-12">
+      <div class="call-support">
+        <h3>Call support</h3>
+        <div class="phone"> 
+          <a href="tel:+00-00 00 00 0000">+00 000-000-0000</a>
+          <span class="toll-free">or toll free no.</span>
+          <a href="tel:+00-000-000 0000">+0000 0000 0000</a>
+        </div>
+      </div>  
+    </div>
+    <!-- Zendesk's component to show/display the Zendek's Chat Component (if enabled from Zendesk's Admin Section) -->
+    {{chat}}
+  </div>  
+</div>        

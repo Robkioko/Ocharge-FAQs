@@ -1,0 +1,20 @@
+<div class="container error-page">
+   <p class="error-img">
+      <!-- Replace Image src after uploading the assets folder, under Zendesk's Assets. Use generated Zendesk's Assets full path for file "404-image.png" -->
+      <img src="{{asset '404-image.png'}}" alt="404 Page Not Found" />
+   </p>
+   <h1>{{t 'oops'}}</h1>
+   {{#is error 'unauthorized'}}
+   <h2>{{link 'sign_in'}}</h2>
+   {{/is}}
+   {{#is error 'forbidden'}}
+   <h2>{{t 'not_authorized'}}</h2>
+   {{/is}}
+   {{#is error 'not_found'}}
+   <h2>{{t 'nonexistent_page'}}</h2>
+   <p>{{t 'mistyped_address_or_moved_page'}}</p>
+   {{/is}}
+   {{#link 'help_center'}}
+   {{t 'back_to_homepage'}}
+   {{/link}}
+</div>

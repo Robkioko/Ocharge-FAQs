@@ -1,0 +1,28 @@
+<div class="container">
+   <div class="tutorial-videos section-articles">
+      <!-- Zendesk's component to show/display the Section Title -->
+      <h3>{{section.name}}</h3>
+      <!-- Zendesk's component to show/display the Section Description -->
+      <p class="section-description">{{section.description}}</p>
+      <!-- Zendesk's component to show/display the Display Section's articles list -->
+      <div class="article-lists">
+         {{#if section.articles}}
+         <ul class="article-list">
+            {{#each section.articles}}
+            <li {{#if promoted}} class="article-promoted" {{/if}}>
+            {{#if promoted}}
+            <span data-title="{{t 'promoted'}}">★</span>
+            {{/if}}
+            <a href="{{url}}">{{title}}</a>
+            </li>
+            {{/each}}
+         </ul>
+         {{else}}
+         <i class="section-empty">
+         <a href="{{section.url}}">{{t 'empty'}}</a>
+         </i>
+         {{/if}}
+         {{pagination}}
+      </div>
+   </div>
+</div>

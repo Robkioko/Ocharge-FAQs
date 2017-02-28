@@ -1,0 +1,76 @@
+<header class="header">
+   <div class="container-fluid container main-logo">
+      <div class="row">
+         <div class="col-md-4 col-sm-4 col-xs-12">
+            <!-- Zendesk's component to show/display the Help center logo -->
+            <div class="logo">
+               {{#link 'help_center'}}
+               <img src="{{logo_url}}" alt="{{t 'logo'}}" />
+               {{/link}}
+            </div>
+         </div>
+         <div class="col-md-8 col-sm-8 col-xs-12">
+            <div class="pull-right language">
+               {{#if alternative_locales}}
+               <div class="dropdown language-selector" aria-haspopup="true">
+                  <a class="dropdown-toggle btn">
+                  {{current_locale.name}}
+                  </a>
+                  <span class="dropdown-menu dropdown-menu-end" role="menu">
+                  {{#each alternative_locales}}
+                  <a href="{{url}}" dir="{{direction}}" rel="nofollow" role="menuitem">
+                  {{name}}
+                  </a>
+                  {{/each}}
+                  </span>
+               </div>
+               {{/if}}
+               <!-- Zendesk's component to show/display the 'Submit a Request' link so that user can sumbit their queries/question/bugs on help center -->
+               {{link 'new_request' class='submit-a-request btn'}}
+               <!-- Zendesk's component to show/display the Signin Link OR Logged in user menu -->
+               {{user_info}}
+            </div>
+         </div>
+      </div>
+   </div>
+</header>
+<div class="navigation">
+   <div class="container">
+      <div class="row">
+         <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+               <span class="glyphicon glyphicon-align-justify"></span>
+            </button>
+         </div>
+         <nav class="navbar navbar-collapse collapse nav-bg">
+            <ul class="nav navbar-nav menu">
+               <li class="active"><a href="#">Support</a></li>
+               <li><a href="#">Knowledge base </a></li>
+               <li><a href="#">Products </a></li>
+               <li><a href="#">Community </a></li>
+            </ul>
+         </nav>
+      </div>
+      <div class="row">
+         <div class="col-md-6 col-sm-6 col-xs-6">
+            <div class="welcome-message">
+               <p>{{help_center.name}}</p>
+            </div>
+         </div>
+         <div class="col-md-6 col-sm-6 col-xs-6">
+            <div class="header-img">
+               <!-- Replace Image src after uploading the assets folder, under Zendesk's Assets. Use generated Zendesk's Assets full path for file "header.jpg" -->
+               <img src="{{asset 'header.jpg'}}" height="99" />
+            </div>
+         </div>
+      </div>
+      <div class="col-sm-12 col-xs-12">
+         <div class="row">
+            <div class="search-bar text-left">
+               <!-- Zendesk's search Component in use -->
+               {{search instant=true}}
+            </div>
+         </div>
+      </div>
+   </div>
+</div>

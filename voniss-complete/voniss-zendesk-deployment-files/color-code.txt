@@ -1,0 +1,5 @@
+color 1 : Header BG color (color-code: #3b4742)
+color 2 : Footer BG color  (color-code: #2e2e2e)
+color 3 : Header and buttons bg color (color-code: #35a479)
+color 4 : Links Color (color-code: #5d5d5d)
+color 5 : Body BG color (color-code: #ffffff)
